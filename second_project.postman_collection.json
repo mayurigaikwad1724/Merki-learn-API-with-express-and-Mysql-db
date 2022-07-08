@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "4e00cc6a-007a-4cbc-ac0b-e51fe5ed7737",
+		"name": "second_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20427719"
+	},
+	"item": [
+		{
+			"name": "get_course_data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first name\":\"Mayuri\",\n    \"last name\": \"Gaikwad\",\n    \"email\":\"mayuri20@navgurukul.org\",\n    \"skill\":\"node\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "get_course_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/course/53"
+			},
+			"response": []
+		},
+		{
+			"name": "createCourse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"72\",\n    \"name\": \"Grammar 101\",\n    \"logo\": \"https://bit.ly/2zp7YLR\",\n    \"notes\": null,\n    \"days_to_complete\": \"30\",\n    \"short_description\": \"English Grammar\",\n    \"type\": \"html\",\n    \"course_type\": null,\n    \"lang_available\": [\n        \"en\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/course/post"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_course_id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"53\",\n    \"name\": \"Understanding programming through recursion\",\n    \"logo\": \"http://bit.do/recursion-png\",\n    \"notes\": null,\n    \"days_to_complete\": \"45\",\n    \"short_description\": \"Iss course ko hum use kar kar recursions aur programming ki depth mei jayenge.\",\n    \"type\": \"html\",\n    \"course_type\": null,\n    \"lang_available\": [\n        \"en\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/course/delete/53"
+			},
+			"response": []
+		},
+		{
+			"name": "update_course",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"53\",\n    \"name\": \"Understanding programming through recursion\",\n    \"logo\": \"http://bit.do/recursion-png\",\n    \"notes\": null,\n    \"days_to_complete\": \"45\",\n    \"short_description\": \"Iss course ko hum use kar kar recursions aur programming ki depth mei jayenge.\",\n    \"type\": \"css\",\n    \"course_type\": null,\n    \"lang_available\": [\n        \"en\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/course/update/53"
+			},
+			"response": []
+		}
+	]
+}
